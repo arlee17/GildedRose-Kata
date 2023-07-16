@@ -23,7 +23,7 @@ class SulfurasTest extends TestCase
 
     public function testQualityCannotBeNegative()
     {
-        $item = new Item('Conjured', 10, -1);
+        $item = new Item('Sulfuras, Hand of Ragnaros', 10, -1);
         $conjured = new Sulfuras($item);
         $conjured->updateQuality();
         $this->assertEquals(10, $item->sellIn);

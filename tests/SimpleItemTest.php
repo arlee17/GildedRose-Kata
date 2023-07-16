@@ -23,7 +23,7 @@ class SimpleItemTest extends TestCase
 
     public function testQualityCannotBeNegative()
     {
-        $item = new Item('Conjured', 10, -1);
+        $item = new Item('+5 Dexterity Vest', 10, -1);
         $conjured = new SimpleItem($item);
         $conjured->updateQuality();
         $this->assertEquals(9, $item->sellIn);
@@ -32,7 +32,7 @@ class SimpleItemTest extends TestCase
 
     public function testUpdateQuality()
     {
-        $item = new Item('Conjured', 10, 20);
+        $item = new Item('+5 Dexterity Vest', 10, 20);
         $conjured = new SimpleItem($item);
         $conjured->updateQuality();
         $this->assertEquals(9, $item->sellIn);

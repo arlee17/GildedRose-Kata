@@ -14,7 +14,7 @@ class BackstagePassesTest extends TestCase
 {
     public function testQualityCannotBeMoreThanFifty()
     {
-        $item = new Item('Aged Brie', 10, 55);
+        $item = new Item('Backstage passes to a TAFKAL80ETC concert', 10, 55);
         $backstagePasses = new BackstagePasses($item);
         $backstagePasses->updateQuality();
         $this->assertSame(9, $item->sellIn);

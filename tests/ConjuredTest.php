@@ -14,7 +14,7 @@ class ConjuredTest extends TestCase
 {
     public function testQualityCannotBeMoreThanFifty()
     {
-        $item = new Item('Aged Brie', 10, 55);
+        $item = new Item('Conjured', 10, 55);
         $backstagePasses = new Conjured($item);
         $backstagePasses->updateQuality();
         $this->assertSame(9, $item->sellIn);
